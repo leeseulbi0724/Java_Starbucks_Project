@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/starbucks/images/logo.png">
+<title>Starbucks Coffee Korea</title>
 <style>
 /* 비밀번호 찾기 - 비밀번호 변경 */
 section.reset_pass {

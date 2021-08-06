@@ -5,6 +5,7 @@ import="com.starbucks.dao.mapDAO, com.starbucks.vo.mapVO, java.util.*"%>
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/starbucks/images/logo.png">
 <title>Starbucks Coffee Korea</title>
 <style>
 	#map { width:100%; height:650px; position:relative;  }
@@ -146,6 +147,7 @@ $(document).ready(function() {
 	<jsp:include page ="../footer.jsp"></jsp:include>
 </body>
 <script>
+
 	var mapContainer = document.getElementById('map');
 	var mapOptions = {
 		center: new kakao.maps.LatLng(37.566400, 126.978573),
@@ -153,66 +155,22 @@ $(document).ready(function() {
 	};
 	var map = new kakao.maps.Map(mapContainer, mapOptions);	
 	
-	// 마커를 표시할 위치와 title 객체 배열
-	/**var positions = [
-	    {
-	        title: '무교로', 
-	        latlng: new kakao.maps.LatLng(37.567265, 126.978946)
-	    },
-	    {
-	        title: '한국프레스센터', 
-	        latlng: new kakao.maps.LatLng(37.567418, 126.977859)
-	    },
-	    {
-	        title: '무교동', 
-	        latlng: new kakao.maps.LatLng(37.567824, 126.978810)
-	    },
-	    {
-	        title: '시청',
-	        latlng: new kakao.maps.LatLng(37.566274, 126.979784)
-	    },
-	    {
-	        title: '시청플러스',
-	        latlng: new kakao.maps.LatLng(37.566292, 126.980078)
-	    },
-	    {
-	        title: '을지로국제빌딩',
-	        latlng: new kakao.maps.LatLng(37.567059, 126.982104)
-	    },
-	    {
-	        title: '환구단',
-	        latlng: new kakao.maps.LatLng(37.564535, 126.979230)
-	    },
-	    {
-	        title: '광화문우체국',
-	        latlng: new kakao.maps.LatLng(37.569779, 126.978028)
-	    },
-	    {
-	        title: '소공로북창',
-	        latlng: new kakao.maps.LatLng(37.563688, 126.978879)
-	    },
-	    {
-	        title: '소공로',
-	        latlng: new kakao.maps.LatLng(37.563770, 126.980747)
-	    }
-	];**/
-	
 	// 마커 이미지의 이미지 주소
 	var imageSrc = "http://localhost:9000/starbucks/images/pin_general.png";
 	    
-	//for (var i = 0; i < positions.length; i ++) {	    
-	    // 마커 이미지의 이미지 크기
-	    var imageSize = new kakao.maps.Size(38, 60); 	    
-	    // 마커 이미지 생성
-	    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); 	    
-	    // 마커 생성
-	    var marker = new kakao.maps.Marker({
-	        map: map, // 마커를 표시할 지도
-	        //position: positions[i].latlng, // 마커를 표시할 위치
-	       // title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시
-	        image : markerImage // 마커 이미지 
-	    });	    
-	//}		
+    
+    // 마커 이미지의 이미지 크기
+    var imageSize = new kakao.maps.Size(38, 60); 	    
+    // 마커 이미지 생성
+    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); 	    
+    // 마커 생성
+    var marker = new kakao.maps.Marker({
+        map: map, // 마커를 표시할 지도
+        //position: positions[i].latlng, // 마커를 표시할 위치
+       // title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시
+        image : markerImage // 마커 이미지 
+    });	    
+	
 
 	
 	function zoomOut() {	
@@ -228,8 +186,8 @@ $(document).ready(function() {
 	// 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성합니다
 	var infowindow = new kakao.maps.InfoWindow({zIndex:1});
 	
-		function zoomIn(name) {		
-			if (name == "서울시 전체") {
+		function zoomIn(name) {	//지역이름을 name값으로 넘겨받음
+			if (name == "서울시 전체") { 
 				name = "서울시 스타벅스";
 			} else if (name == "세종시 전체") {
 				name = "세종시 스타벅스";				

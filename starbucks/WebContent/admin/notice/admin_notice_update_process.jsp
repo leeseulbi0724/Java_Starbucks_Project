@@ -23,7 +23,7 @@
 	noticeDAO ndao = new noticeDAO();
 	boolean result = false;
 	
-	if (multi.getOriginalFileName("nfile") != null) {
+	if (multi.getOriginalFileName("nfile") != null) { //파일이 널이 아닐 경우 파일포함 업데이트 
 		vo.setTitle(multi.getParameter("title"));
 		vo.setContent(multi.getParameter("content"));
 		vo.setNid(request.getParameter("nid"));
@@ -36,13 +36,13 @@
 			File old_file = new File(old_file_path);
 			
 			if (old_file.exists()) {
-				if(old_file.delete()) {
+				if(old_file.delete()) { //기존에 등록되있던 파일 폴더에서 삭제
 					System.out.println("파일삭제완료!");
 				}
 			}
 		}		
 		
-	} else {
+	} else { // 파일이 널이면 파일제외 업데이트
 		vo.setTitle(multi.getParameter("title"));
 		vo.setContent(multi.getParameter("content"));
 		vo.setNid(request.getParameter("nid"));

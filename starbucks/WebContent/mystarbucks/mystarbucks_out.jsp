@@ -6,6 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/starbucks/images/logo.png">
 <title>Starbucks Coffee Korea</title>
 
 <script src="../js/jquery-3.6.0.min.js"></script>

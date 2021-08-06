@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/starbucks/images/logo.png">
 <title>Starbucks Coffee Korea</title>
 <style>
 /* 로그인 */
@@ -145,6 +146,8 @@ section.login nav>ul>li>div{
 <script src="../js/jquery-3.6.0.min.js"></script>
 <script>
 $(document).ready(function(){
+	
+	
     var userInputId = getCookie("userInputId");//저장된 쿠기값 가져오기
     if (userInputId == "undefined") {
     	$("input[name='id']").val(""); 
@@ -174,6 +177,10 @@ $(document).ready(function(){
             setCookie("userInputId", userInputId, 7); // 7일 동안 쿠키 보관
         }
     });
+    
+    
+    
+    
 });
 
 	function saveEvent(){

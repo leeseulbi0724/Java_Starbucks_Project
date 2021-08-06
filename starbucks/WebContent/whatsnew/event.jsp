@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>이벤트 | Insert title here</title>
+<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/starbucks/images/logo.png">
+<title>이벤트 | Starbucks Coffee Korea</title>
 <style>
 .event_txt{
 	padding-top: 30px;

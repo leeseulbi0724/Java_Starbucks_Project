@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
 			 import="com.starbucks.dao.noticeDAO, com.starbucks.vo.noticeVO, java.util.*" %>
+			 
  <% 
  	String rpage = request.getParameter("page"); //최초 호출시에는 rpage=null
 	noticeDAO dao = new noticeDAO();	
@@ -30,14 +31,15 @@
 	}
 	
 	ArrayList<noticeVO> list = dao.getList(startCount, endCount);
-		
- 	//noticeDAO ndao = new noticeDAO();
- 	//ArrayList<noticeVO> list = ndao.getSelectResult();
+	
  %>
+ 
+ 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/starbucks/images/logo.png">
 <title>공지사항 | Starbucks Coffee Korea</title>
 <style>
 .sub_title{
@@ -191,6 +193,7 @@ colgroup{
 <script src="http://localhost:9000/starbucks/js/jquery-3.6.0.min.js"></script>
 <script src="http://localhost:9000/starbucks/js/am-pagination.js"></script>
 <script>
+
 	$(document).ready(function(){
 		
 		var pager = jQuery('#ampaginationsm').pagination({
@@ -214,14 +217,16 @@ colgroup{
 	           $(location).attr('href', "http://localhost:9000/starbucks/whatsnew/notice.jsp?page="+e.page);         
 	    });
 		
-		$("#search").click (function() {
-	        var value = $("#search_input").val().toLowerCase();
-	        $(".notice tr").filter(function() {
+		$("#search").click (function() { //검색 기능
+	        var value = $("#search_input").val().toLowerCase(); //호출 문자열을 소문자로 변환해 반환
+	        $(".notice tr").filter(function() { //새로운 배열로 반환
 	            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
 	        });
 	    });
 		
  	});
+	
+	
 </script> 
 </head>
 <body>

@@ -15,6 +15,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/starbucks/images/logo.png">
 <title>고객의 소리 | Starbucks Coffee Korea</title>
 <style>
 	body { overflow-x:hidden; overflow-y:auto; }

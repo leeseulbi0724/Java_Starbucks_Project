@@ -9,6 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/starbucks/images/logo.png">
 <title>Starbucks Coffee Korea</title>
 <link rel="stylesheet"  href="http://localhost:9000/starbucks/css/carousel.css">
 <style>

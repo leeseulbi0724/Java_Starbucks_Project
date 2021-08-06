@@ -15,6 +15,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/starbucks/images/logo.png">
 <title>고객의 소리 | Starbucks Coffee Korea</title>
 <style>
 	body { overflow-x:hidden; overflow-y:auto; }
@@ -256,9 +257,9 @@
 		});
 		
 		
-		function content(sid) {					
+		function content(sid) { //제목 클릭 시 뜨는 모달창 함수
 			$.ajax( {
-				url:"mystarbucks_sound_process.jsp?sid="+sid,
+				url:"mystarbucks_sound_process.jsp?sid="+sid, //process에게 sid를 넘김
 				success : function(result) {
 					var jdata = JSON.parse(result);
 					
@@ -267,15 +268,15 @@
 					$("#content").text(jdata.content);
 					$("#date").text(jdata.sdate);
 					
-					if (jdata.efile != null) {
+					if (jdata.efile != null) { //첨부된 파일이 있을경우
 						var src = "http://localhost:9000/starbucks/upload/"+jdata.efile;						
 						$("#img").html("<img src="+src+" width=500 height=200>");						
-					} else {
+					} else { //첨부된 파일이 없을경우
 						$("#img").text("이미지가 없습니다");
 					}
 					
 					 var $layerPopupObj = $('div.content_box');
-					var left = ( $(window).scrollLeft() + ($(window).width() - $layerPopupObj.width()) / 2 );
+					 var left = ( $(window).scrollLeft() + ($(window).width() - $layerPopupObj.width()) / 2 );
 					 var top = ( $(window).scrollTop() + ($(window).height() - $layerPopupObj.height() + 70) / 2 );
 					 $layerPopupObj.css({'left':left,'top':top, 'position':'absolute'});
 					 $('body').css('position','relative').append($layerPopupObj);

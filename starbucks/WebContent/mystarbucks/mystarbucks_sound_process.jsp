@@ -2,6 +2,7 @@
 	import="com.starbucks.dao.*, com.starbucks.vo.*"
 	import="com.google.gson.*"
 %>
+
 <%
 	String sid = request.getParameter("sid");
 	serviceDAO dao = new serviceDAO();
@@ -26,7 +27,7 @@
 	jobj.addProperty("sfile", vo.getSfile());
 	
 	out.write(gson.toJson(jobj));
-	
-
-
 %>
+
+
+

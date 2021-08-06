@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Starbucks Coffee Korea</title>
+<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/starbucks/images/logo.png">
+<title>Starbucks Coffee Korea</title>tle>
 </head>
 <style>
 	section { text-align:center; padding:200px; }

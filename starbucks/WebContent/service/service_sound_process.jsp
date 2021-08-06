@@ -4,7 +4,7 @@
 <%@page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
 <%@page import="com.oreilly.servlet.MultipartRequest"%> 
 <%
-		//파일이 저장될 서버의 경로. 되도록이면 getRealPath를 이용하자.
+		//파일이 저장될 서버의 경로. 되도록이면 getRealPath를 이용
 		String savePath = request.getServletContext().getRealPath("/upload");
 		System.out.println(savePath);
 		//파일 크기 15MB로 제한

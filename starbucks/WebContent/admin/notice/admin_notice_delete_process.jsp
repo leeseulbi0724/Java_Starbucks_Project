@@ -22,7 +22,7 @@
 		String old_file_path = savePath+"/"+multi.getParameter("nsfile_old");
 		File old_file = new File(old_file_path);
 		
-		if (old_file.exists()) {
+		if (old_file.exists()) { //게시글에 있던 파일을 폴더에서 삭제
 			if(old_file.delete()) {
 				System.out.println("파일삭제완료!");
 			}
@@ -35,3 +35,7 @@
 	}
 	
 %>
+
+
+
+

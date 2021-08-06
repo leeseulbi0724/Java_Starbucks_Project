@@ -9,6 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/starbucks/images/logo.png">
 <title>MENU | Starbucks Coffee Korea</title>
 <style>
 	/* 메뉴 & 경로 */
